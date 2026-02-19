@@ -1,28 +1,51 @@
 body {
     background-image: url(Arquivos/background.jpg);
     margin: 0;
+    min-height: 100dvh;
+
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .central {
     display: flex;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.450), rgba(0, 0, 0, 0.100), rgba(0, 0, 0, 0.250));
-    margin: 250px 400px 250px 400px;
+    gap: 30px;
+
+    width: 90%;
+    max-width: 950px;
+
+    padding: 40px;
+
+    background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.450),
+        rgba(0, 0, 0, 0.100),
+        rgba(0, 0, 0, 0.250));
+
     border-radius: 50px;
 }
 
-.icone-principal { /*mexe com a div*/
-    margin: 0 0 0 70px;
+.esquerda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.icone-principal img { /*mexe com a imagem da div*/
-    width: 390px;
+.logo-lain img { /*mexe com a imagem da div*/
+    width: 380px;
+    max-width: 100%;
 }
 
 .nav-redes-sociais {
     display: flex;
-    margin: 5px 0 0 102px;
     gap: 10px;
+    margin-top: 7px;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
 }
 
 .nav-redes-sociais img{
@@ -62,6 +85,25 @@ body {
 
 .usuario {
     margin: 10px 50px 10px 60px;
-    font-size: 70px;
+    font-size: 65px;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .central {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .usuario {
+        font-size: 42px;
+        margin: 20px 0;
+    }
+
+    .nav-redes-sociais {
+        margin: 20px 0 0 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
